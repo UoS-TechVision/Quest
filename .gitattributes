@@ -1,0 +1,5 @@
+ProjectQuest/Library/PackageCache/com.unity.burst@1.6.5/.Runtime/libburst-llvm-10.dylib filter=lfs diff=lfs merge=lfs -text
+ProjectQuest/Library/PackageCache/com.unity.burst@1.6.5/.Runtime/libburst-llvm-11.dylib filter=lfs diff=lfs merge=lfs -text
+ProjectQuest/Library/PackageCache/com.unity.burst@1.6.5/.Runtime/hostlin/lld filter=lfs diff=lfs merge=lfs -text
+ProjectQuest/Library/PackageCache/com.unity.burst@1.6.5/.Runtime/hostmac/dsymutil filter=lfs diff=lfs merge=lfs -text
+ProjectQuest/Library/PackageCache/com.unity.burst@1.6.5/.Runtime/hostmac/lld filter=lfs diff=lfs merge=lfs -text
