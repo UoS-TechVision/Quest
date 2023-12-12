@@ -16,6 +16,27 @@ public class JoystickMove : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+        if(transform.position.y >= 4.4375f)
+        {
+            transform.position = new Vector3(transform.position.x, 4.4375f, 0.0f);
+        }
+
+        if(transform.position.y <= -4.4375f)
+        {
+            transform.position = new Vector3(transform.position.x, -4.4375f, 0.0f);
+        }
+
+        if(transform.position.x >= 10.0445f)
+        {
+            transform.position = new Vector3(10.0445f, transform.position.y, 0.0f);
+        }
+
+        if(transform.position.x <= -10.0445f)
+        {
+            transform.position = new Vector3(-10.0445f, transform.position.y, 0.0f);
+        }
+
         if(movementJoystick.Direction.y != 0)
         {
             rb.velocity = new Vector2(movementJoystick.Direction.x * playerSpeed, movementJoystick.Direction.y * playerSpeed);
