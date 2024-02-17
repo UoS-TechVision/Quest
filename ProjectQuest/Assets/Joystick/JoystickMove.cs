@@ -13,6 +13,13 @@ public class JoystickMove : MonoBehaviour
     float scaleX;
     Vector3 currentScale;
 
+    public bool isMovingLeft;
+    public bool isMovingRight;
+    public bool isMovingDown;
+    public bool isMovingUp;
+
+    public Animator playerAnimator;
+
     public Sprite standing, running;
 
     private void Start()
@@ -34,28 +41,47 @@ public class JoystickMove : MonoBehaviour
         //    DOWN -180  180 DOWN
         float zAxis = Mathf.Atan2(horizontalAxis,verticalAxis) * Mathf.Rad2Deg;
 
-        // Player is moving to the left (as zAxis is negative)
-        if (zAxis < 0 && isFacingRight)
+        if (zAxis < 45 && zAxis > -45)
         {
-            // If moving left and currently facing right, mirror the character
-            MirrorCharacter();
+            playerAnimator.SetBool("isMovingRight", false);
+            playerAnimator.SetBool("isMovingDown", false);
+            playerAnimator.SetBool("isMovingLeft", false);
+            playerAnimator.SetBool("isMovingUp", true);
         }
-        else if (zAxis > 0 && !isFacingRight)
+        // Player is moving to the left (as zAxis is negative)
+        if (zAxis <= -45 && zAxis >= -135)
         {
-            // If moving right and currently not facing right, unmirror the character
-            UnmirrorCharacter();
+            Debug.Log("player is moving left");
+            playerAnimator.SetBool("isMovingRight", false);
+            playerAnimator.SetBool("isMovingDown", false);
+            playerAnimator.SetBool("isMovingUp", false);
+            playerAnimator.SetBool("isMovingLeft", true);
+            Debug.Log(isMovingLeft);
+        }
+        if (zAxis >= 45 && zAxis <= 135)
+        {
+            Debug.Log("player is moving right");
+            playerAnimator.SetBool("isMovingLeft", false);
+            playerAnimator.SetBool("isMovingDown", false);
+            playerAnimator.SetBool("isMovingUp", false);
+            playerAnimator.SetBool("isMovingRight", true);
+            Debug.Log(isMovingRight);
+        }
+        if (Mathf.Abs(zAxis) > 135) {
+            playerAnimator.SetBool("isMovingRight", false);
+            playerAnimator.SetBool("isMovingLeft", false);
+            playerAnimator.SetBool("isMovingUp", false);
+            playerAnimator.SetBool("isMovingDown", true);
         }
 
-        // Update the character image based on the joystick input
+
         if (movementJoystick.Direction.y == 0) 
         {
-            // The player is not moving, so the sprite image is a standing man.
-            GetComponent<SpriteRenderer>().sprite = standing;
-        }
-        else 
-        {
-            // The player is moving, so the sprite image is a running man.
-            GetComponent<SpriteRenderer>().sprite = running;
+             //The player is not moving, so the sprite image is a standing man.
+            playerAnimator.SetBool("isMovingLeft", false);
+            playerAnimator.SetBool("isMovingRight", false);
+            playerAnimator.SetBool("isMovingUp", false);
+            playerAnimator.SetBool("isMovingDown", false);
         }
     }
 
@@ -74,14 +100,14 @@ public class JoystickMove : MonoBehaviour
             transform.position = new Vector3(transform.position.x, -2.926f, -1.0f);
         }
 
-        if(transform.position.x >= 7.05f) // 10.0445f
+        if(transform.position.x >= 7.283f) // 10.0445f
         {
-            transform.position = new Vector3(7.18f, transform.position.y, -1.0f);
+            transform.position = new Vector3(7.283f, transform.position.y, -1.0f);
         }
 
-        if(transform.position.x <= -7.05f) // -10.0445f
+        if(transform.position.x <= -7.283f) // -10.0445f
         {
-            transform.position = new Vector3(-7.18f, transform.position.y, -1.0f);
+            transform.position = new Vector3(-7.283f, transform.position.y, -1.0f);
         }
 
         // Calculates the velocity of the movement
