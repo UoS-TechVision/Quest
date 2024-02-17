@@ -49,7 +49,7 @@ public class CatInteractions : MonoBehaviour
     {
         if (this.tag == "Mittens"){
             Debug.Log("Win");
-            SceneManager.LoadScene("Level Scene");
+            SceneManager.LoadScene("SampleScene");
         }
         else{
             Debug.Log("Lose");
