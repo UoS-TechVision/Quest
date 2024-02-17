@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CatInteractions : MonoBehaviour
 {
@@ -48,6 +49,7 @@ public class CatInteractions : MonoBehaviour
     {
         if (this.tag == "Mittens"){
             Debug.Log("Win");
+            SceneManager.LoadScene("Level Scene");
         }
         else{
             Debug.Log("Lose");
