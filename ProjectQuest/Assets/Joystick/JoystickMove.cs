@@ -64,14 +64,14 @@ public class JoystickMove : MonoBehaviour
         // Implements the boundaries of the map. These values must be changed depending
         // on the size of the character sprite. 
         // The current values are for a pixel stick man. Commented values are for a white box.
-        if(transform.position.y >= 3.7f) // 4.4375f
+        if(transform.position.y >= 3.6f) // 4.4375f
         {
-            transform.position = new Vector3(transform.position.x, 3.7f, 0.0f);
+            transform.position = new Vector3(transform.position.x, 3.6f, 0.0f);
         }
 
-        if(transform.position.y <= -3.7f) // -4.4375f
+        if(transform.position.y <= -3.6f) // -4.4375f
         {
-            transform.position = new Vector3(transform.position.x, -3.7f, 0.0f);
+            transform.position = new Vector3(transform.position.x, -3.6f, 0.0f);
         }
 
         if(transform.position.x >= 9f) // 10.0445f
