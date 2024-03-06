@@ -1130,7 +1130,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1502723822}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: changeScene
+        m_MethodName: changeScene1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1207,7 +1207,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d0d97e479b8084b9adaf87ef50bdc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: SampleScene
+  scene1: SampleScene
+  scene2: 
 --- !u!4 &1502723823
 Transform:
   m_ObjectHideFlags: 0
