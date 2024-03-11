@@ -41,8 +41,17 @@ public class LevelManager : MonoBehaviour
 
     void PauseGame()
     {
-        Time.timeScale = 0f; // Pause the game
-        pauseMenuUI.SetActive(true);
+        if (!pauseMenuUI.activeSelf)
+        {
+            Time.timeScale = 0f; // Pause the game
+            pauseMenuUI.SetActive(true);
+        }
+        else
+        {
+            Time.timeScale = 1f; // Resume the game
+            pauseMenuUI.SetActive(false);
+        }
+        
     }
 
     public void ResumeGame()
