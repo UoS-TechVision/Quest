@@ -3245,7 +3245,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d0d97e479b8084b9adaf87ef50bdc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: draggablePuzzle
+  scene1: 
+  scene2: 
+  pauseMenuUI: {fileID: 0}
 --- !u!4 &1137552237
 Transform:
   m_ObjectHideFlags: 0
@@ -4722,7 +4724,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 16.739346
+  m_PointLightOuterRadius: 15.266893
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -4742,7 +4744,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058453892}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7934692, w: 0.6086104}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7545379, w: 0.65625656}
   m_LocalPosition: {x: -6.52, y: 1.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
