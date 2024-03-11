@@ -6,8 +6,22 @@ using UnityEngine.Events;
 public class Interactable : MonoBehaviour
 {
     public bool isInRange;
-    public UnityEvent interactAction;
     public GameObject myButton;
+    public Collider2D puzzleCollider;
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        puzzleCollider.isTrigger = true;
+        Debug.Log("Entered collision with " + collision.gameObject.name);
+        isInRange = true;
+    }
+
+    // Gets called when the object exits the collision
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        Debug.Log("Exited collision with " + collision.gameObject.name);
+        isInRange = false;
+    }
 
     void Update()
     {
@@ -20,22 +34,5 @@ public class Interactable : MonoBehaviour
         }
         
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.CompareTag("Player"))
-        {
-            isInRange = true;
-            Debug.Log("Player in range");
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-       if(collision.gameObject.CompareTag("Player"))
-        {
-            isInRange = false;
-            Debug.Log("Player not in range");
-        } 
-    }
 }
+
