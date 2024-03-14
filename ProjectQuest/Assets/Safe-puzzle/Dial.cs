@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class Dial : MonoBehaviour
 {
-
-    [SerializeField] int size; // number of numbers on the dial
     public int fullRotations = 0;
     Vector3 currentMousePosition; // angle of mouse when clicked (relative to up)
 

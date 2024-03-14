@@ -5,7 +5,7 @@ public class Safe : MonoBehaviour
     [SerializeField] int[] code;
     [SerializeField] Dial dial;
     [SerializeField] float[] wheelPack = {0f,0f,0f,0f};
-    [SerializeField] float[] wheelPackGradians = {0f,0f,0f,0f};
+    [SerializeField] int[] wheelPackGradians = {0,0,0,0};
     [SerializeField] int stage = 0;
 
     void Start()
@@ -20,16 +20,16 @@ public class Safe : MonoBehaviour
             {
                 wheelPack[i+1] = wheelPack[i] - 360f;
             }
-            else if (wheelPack[i] < wheelPack[i+1] - 360f)
+            else if (wheelPack[i] < wheelPack[i+1])
             {
-                wheelPack[i+1] = wheelPack[i] + 360f;
+                wheelPack[i+1] = wheelPack[i];
             }
         }
 
-        // for (int i = 0; i < wheelPack.Length; i++)
-        // {
-        //     wheelPackGradians[i] = wheelPack[i] * 100f/360f;
-        // }
+        for (int i = 0; i < wheelPack.Length; i++)
+        {
+            wheelPackGradians[i] = gradians(wheelPack[i]);
+        }
 
         bool cracked = true;
         for (int i = 0; i < wheelPack.Length; i++)
@@ -44,5 +44,14 @@ public class Safe : MonoBehaviour
         {
             Debug.Log("You Win!");
         }
+    }
+
+    int gradians(float a)
+    {
+        return mod100(Mathf.RoundToInt(a * 100f/360f));
+    }
+    int mod100(int a)
+    {
+        return (Mathf.Abs(a * 100) + a) % 100;
     }
 }
