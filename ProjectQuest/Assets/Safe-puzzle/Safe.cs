@@ -2,19 +2,14 @@ using UnityEngine;
 
 public class Safe : MonoBehaviour
 {
-    [SerializeField] int[] code;
+    [SerializeField] int[] code; //4 digit code (0-99)
     [SerializeField] Dial dial;
-    [SerializeField] float[] wheelPack = {0f,0f,0f,0f};
-    [SerializeField] int[] wheelPackGradians = {0,0,0,0};
-    [SerializeField] int stage = 0;
-
-    void Start()
-    {
-    }
+    [SerializeField] float[] wheelPack = {0f,0f,0f,0f}; //angle of each wheel
+    [SerializeField] int[] wheelPackGradians = {0,0,0,0}; //value of each wheel
     void Update()
     {
-        wheelPack[0] = dial.fullRotations * 360f + dial.transform.eulerAngles.z;
-        for (int i = 0; i < wheelPack.Length - 1; i++)
+        wheelPack[0] = dial.fullRotations * 360f + dial.transform.eulerAngles.z; //first wheel follows the dial
+        for (int i = 0; i < wheelPack.Length - 1; i++) //loop through other wheels
         {
             if (wheelPack[i] > wheelPack[i+1] + 360f)
             {
@@ -28,13 +23,13 @@ public class Safe : MonoBehaviour
 
         for (int i = 0; i < wheelPack.Length; i++)
         {
-            wheelPackGradians[i] = gradians(wheelPack[i]);
+            wheelPackGradians[i] = gradians(wheelPack[i]); //convert angle to dial value
         }
 
         bool cracked = true;
-        for (int i = 0; i < wheelPack.Length; i++)
+        for (int i = 0; i < wheelPack.Length; i++) //compare to code
         {
-            if (Mathf.Round(wheelPack[i] * 100f/360f) != code[i])
+            if (wheelPackGradians[i] != code[wheelPack.Length - 1 - i])
             {
                 cracked = false;
                 break;
