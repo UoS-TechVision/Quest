@@ -3,25 +3,34 @@ using UnityEngine;
 public class Dial : MonoBehaviour
 {
 
-    [SerializeField] int size; //number of numbers on the dial
-    float initialAngle; //angle of the dial when clicked (relative to up)
-    float initialMouseAngle; //angle of mouse when clicked (relative to up)
+    [SerializeField] int size; // number of numbers on the dial
+    public int fullRotations = 0;
+    Vector3 currentMousePosition; // angle of mouse when clicked (relative to up)
 
-    void OnMouseDown()
+    void OnMouseDown() // gets the current angle of the mouse
     {
-        initialAngle = transform.eulerAngles.z;
-        Debug.Log(initialAngle);
-        initialMouseAngle = MouseAngle();
+        currentMousePosition = MousePosition();
     }
 
-    void OnMouseDrag()
+    void OnMouseDrag() // rotates the dial by the angle the mouse has moved
     {
-        transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, initialAngle + (MouseAngle() - initialMouseAngle)));
+        Vector3 newMousePosition = MousePosition();
+        float mouseAngle = Vector3.SignedAngle(currentMousePosition, newMousePosition, Vector3.forward);
+        Debug.Log(transform.eulerAngles.z);
+        if (transform.eulerAngles.z + mouseAngle > 360f)
+        {
+            fullRotations += 1;
+        }
+        else if (transform.eulerAngles.z + mouseAngle < 0f)
+        {
+            fullRotations -= 1;
+        }
+        transform.Rotate(new Vector3(0f, 0f, mouseAngle));
+        currentMousePosition = newMousePosition;
     }
     
-    private float MouseAngle()
+    private Vector3 MousePosition() // calculates the current angle of the mouse
     {
-        Vector3 mouseScreenPosition = (Camera.main.ScreenToWorldPoint(Input.mousePosition));
-        return Mathf.Atan2(mouseScreenPosition.y, mouseScreenPosition.x) * Mathf.Rad2Deg - 90;
+        return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 }
