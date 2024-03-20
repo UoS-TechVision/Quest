@@ -134,8 +134,8 @@ GameObject:
   - component: {fileID: 126633071}
   - component: {fileID: 126633070}
   m_Layer: 0
-  m_Name: ' safeCollisionBox'
-  m_TagString: Untagged
+  m_Name: safeCollisionBox
+  m_TagString: safeCollisionBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4112,9 +4112,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb6741459163b6148ad4e247c5126e02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInRange: 0
-  myButton: {fileID: 1720493633}
-  puzzleCollider: {fileID: 1377436617}
+  isInRangeType1: 0
+  isInRangeType2: 0
+  buttonType1: {fileID: 1720493633}
+  buttonType2: {fileID: 1664005348}
 --- !u!114 &1139362122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4122,14 +4123,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139362114}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb6741459163b6148ad4e247c5126e02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInRange: 0
-  myButton: {fileID: 1664005348}
-  puzzleCollider: {fileID: 126633070}
+  isInRangeType1: 0
+  isInRangeType2: 0
+  buttonType1: {fileID: 0}
+  buttonType2: {fileID: 0}
 --- !u!1 &1150921370
 GameObject:
   m_ObjectHideFlags: 0
@@ -4793,7 +4795,7 @@ GameObject:
   - component: {fileID: 1377436617}
   m_Layer: 0
   m_Name: puzzleCollisionBox
-  m_TagString: Untagged
+  m_TagString: puzzleCollisionBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
