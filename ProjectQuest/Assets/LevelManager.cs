@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     public string scene1;
     public string scene2;
+    public string scene3;
     public GameObject pauseMenuUI;
 
     // Start is called before the first frame update
@@ -29,6 +30,11 @@ public class LevelManager : MonoBehaviour
     public void changeScene2()
     {
         SceneManager.LoadScene(scene2);
+    }
+
+    public void changeScene3()
+    {
+        SceneManager.LoadScene(scene3);
     }
 
     public void pauseGame() {
