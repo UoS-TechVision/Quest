@@ -13,6 +13,7 @@ public class CatInteractions : MonoBehaviour
     {
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
+
     private void OnMouseDown()
     {   
 
@@ -45,6 +46,7 @@ public class CatInteractions : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().material = materials[0]; 
     }
 
+    // Not needed - only dragging objects now
     public void CheckWin()
     {
         if (this.tag == "Mittens"){
@@ -56,5 +58,4 @@ public class CatInteractions : MonoBehaviour
         }
         Unselect();
     }
-
 }
