@@ -1044,14 +1044,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e2c7bea9706c0576bcd0c7d175c8ac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  code: 22000000400000002f0000001a000000
+  num: 10
+  code: 03000000060000000400000002000000
   dial: {fileID: 869994314}
   wheelPack:
   - 0
   - 0
   - 0
   - 0
-  wheelPackGradians: 00000000000000000000000000000000
+  wheelPackNGradians: 00000000000000000000000000000000
 --- !u!1 &2015455209
 GameObject:
   m_ObjectHideFlags: 0

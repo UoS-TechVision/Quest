@@ -2,10 +2,22 @@ using UnityEngine;
 
 public class Safe : MonoBehaviour
 {
+    [SerializeField] int num;
     [SerializeField] int[] code; //4 digit code (0-99)
     [SerializeField] Dial dial;
-    [SerializeField] float[] wheelPack = {0f,0f,0f,0f}; //angle of each wheel
-    [SerializeField] int[] wheelPackGradians = {0,0,0,0}; //value of each wheel
+    [SerializeField] float[] wheelPack; //angle of each wheel
+    [SerializeField] int[] wheelPackNGradians; //value of each wheel
+
+    void Start()
+    {
+        wheelPack = new float[code.Length];
+        wheelPackNGradians = new int[code.Length];
+        for (int i = 0; i < num; i++)
+        {
+            wheelPack[i] = 0.0f;
+            wheelPackNGradians[i] = 0;
+        }
+    }
     void Update()
     {
         wheelPack[0] = dial.fullRotations * 360f + dial.transform.eulerAngles.z; //first wheel follows the dial
@@ -23,13 +35,13 @@ public class Safe : MonoBehaviour
 
         for (int i = 0; i < wheelPack.Length; i++)
         {
-            wheelPackGradians[i] = gradians(wheelPack[i]); //convert angle to dial value
+            wheelPackNGradians[i] = n_gradians(wheelPack[i], num); //convert angle to dial value
         }
 
         bool cracked = true;
         for (int i = 0; i < wheelPack.Length; i++) //compare to code
         {
-            if (wheelPackGradians[i] != code[wheelPack.Length - 1 - i])
+            if (wheelPackNGradians[i] != code[wheelPack.Length - 1 - i])
             {
                 cracked = false;
                 break;
@@ -41,12 +53,12 @@ public class Safe : MonoBehaviour
         }
     }
 
-    int gradians(float a)
+    int n_gradians(float a, int n)
     {
-        return mod100(Mathf.RoundToInt(a * 100f/360f));
+        return mod_n(Mathf.RoundToInt(a * (float)n/360f), n);
     }
-    int mod100(int a)
+    int mod_n(int a, int n)
     {
-        return (Mathf.Abs(a * 100) + a) % 100;
+        return (Mathf.Abs(a * n) + a) % n;
     }
 }
