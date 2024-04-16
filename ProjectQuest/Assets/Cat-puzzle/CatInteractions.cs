@@ -18,8 +18,8 @@ public class CatInteractions : MonoBehaviour
     {   
 
         mousePositionOffset = gameObject.transform.position - GetMouseWorldPosition();
-        outlined = !outlined;
-
+        //outlined = !outlined;
+        /*
         if (outlined){
             this.transform.parent.GetComponent<catChecker>().SelectLoop();
             gameObject.GetComponent<SpriteRenderer>().material = materials[1];
@@ -29,7 +29,10 @@ public class CatInteractions : MonoBehaviour
         else{
             gameObject.GetComponent<SpriteRenderer>().material = materials[0]; 
         }
+        */
 
+        this.transform.parent.GetComponent<catChecker>().SelectLoop();
+        gameObject.GetComponent<SpriteRenderer>().material = materials[1];
     }
 
     private void OnMouseDrag()
