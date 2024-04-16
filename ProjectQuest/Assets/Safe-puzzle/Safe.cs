@@ -11,6 +11,8 @@ public class Safe : MonoBehaviour
     [SerializeField] AudioSource source;
     [SerializeField] AudioClip clip;
 
+    public GameObject sceneManager;
+
     void Start()
     {
         wheelPack = new float[code.Length];
@@ -58,6 +60,8 @@ public class Safe : MonoBehaviour
         {
             unlocked = true;
             Debug.Log("You Win!"); //REPLACE HERE!!!!!!!!!!!
+            LevelManager levelManager = sceneManager.GetComponent<LevelManager>();
+            levelManager.changeScene2();
         }
     }
 

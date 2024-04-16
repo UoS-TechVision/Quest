@@ -1057,6 +1057,7 @@ MonoBehaviour:
   unlocked: 0
   source: {fileID: 1675683364}
   clip: {fileID: 8300000, guid: 899691d550b954927934b4cbe815505f, type: 3}
+  sceneManager: {fileID: 2015455209}
 --- !u!82 &1675683364
 AudioSource:
   m_ObjectHideFlags: 0
