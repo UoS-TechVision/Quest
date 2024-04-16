@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 704, y: 465}
+  m_AnchoredPosition: {x: -0.0050354, y: 0.0000038147}
+  m_SizeDelta: {x: 1920, y: 1098.2762}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &359212909
 MonoBehaviour:
@@ -233,8 +233,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000015258789, y: 0.000011444092}
-  m_SizeDelta: {x: 179.728, y: 148.537}
+  m_AnchoredPosition: {x: 0.000030517578, y: 0.000011444092}
+  m_SizeDelta: {x: 686.033, y: 148.537}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &393750000
 CanvasRenderer:
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.9152956, g: 0.9622642, b: 0.8851015, a: 1}
+  m_EffectColor: {r: 0.92728263, g: 0.9528302, b: 0.91237986, a: 1}
   m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
 --- !u!114 &393750002
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.18039216, g: 0.16470589, b: 0.21176472, a: 1}
+  m_Color: {r: 0.015686275, g: 0.10980393, b: 0.21960786, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -281,11 +281,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7990f9fd7317a5846a3fc8fa31d61a03, type: 3}
-    m_FontSize: 44
+    m_FontSize: 92
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 54
+    m_MaxSize: 92
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -631,7 +631,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.89, y: -115.43}
+  m_AnchoredPosition: {x: -0.0049948, y: -146}
   m_SizeDelta: {x: 337.998, y: 86.862}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1060931828
@@ -757,7 +757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d0d97e479b8084b9adaf87ef50bdc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene1: SampleScene
+  scene1: HallwayScene
   scene2: 
   scene3: 
   pauseMenuUI: {fileID: 0}
@@ -811,8 +811,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: 48.3}
-  m_SizeDelta: {x: 952.6, y: 50}
+  m_AnchoredPosition: {x: -0.000091553, y: 109}
+  m_SizeDelta: {x: 1708.0197, y: 50}
   m_Pivot: {x: 0.49999994, y: 0.5}
 --- !u!222 &1498961152
 CanvasRenderer:
@@ -859,11 +859,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7990f9fd7317a5846a3fc8fa31d61a03, type: 3}
-    m_FontSize: 63
+    m_FontSize: 125
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 92
+    m_MaxSize: 162
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -919,11 +919,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 2
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
