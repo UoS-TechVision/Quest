@@ -8,6 +8,8 @@ public class Safe : MonoBehaviour
     [SerializeField] float[] wheelPack; //angle of each wheel
     [SerializeField] int[] wheelPackNGradians; //value of each wheel
     [SerializeField] bool unlocked = false;
+    [SerializeField] AudioSource source;
+    [SerializeField] AudioClip clip;
 
     void Start()
     {
@@ -21,6 +23,10 @@ public class Safe : MonoBehaviour
     }
     void Update()
     {
+        if (wheelPackNGradians[0] != n_gradians(dial.fullRotations * 360f + dial.transform.eulerAngles.z, num))
+        {
+            source.PlayOneShot(clip);
+        }
         wheelPack[0] = dial.fullRotations * 360f + dial.transform.eulerAngles.z; //first wheel follows the dial
         for (int i = 0; i < wheelPack.Length - 1; i++) //loop through other wheels
         {
