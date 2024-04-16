@@ -6,15 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/draggablePuzzle.unity
-    guid: ed61a6cdd1c90e34bbfc1f165c0fb788
+    path: Assets/Scenes/TitleScreen.unity
+    guid: 1902e27acf0c69541ab4a030a45222fa
+  - enabled: 1
+    path: Assets/Scenes/HallwayScene.unity
+    guid: 68763619e87f84a4085ae87c328faa4b
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 1
-    path: Assets/Scenes/TitleScreen.unity
-    guid: 1902e27acf0c69541ab4a030a45222fa
+    path: Assets/Scenes/draggablePuzzle.unity
+    guid: ed61a6cdd1c90e34bbfc1f165c0fb788
   - enabled: 1
     path: Assets/Scenes/Safe.unity
     guid: 7b66052b91aae428db1eb99b9c57533d
+  - enabled: 1
+    path: Assets/Scenes/OpenSafe.unity
+    guid: c0b6c89a3b4ca4d479d9a2c86ec973b0
   m_configObjects: {}

@@ -580,7 +580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene1: draggablePuzzle
   scene2: TitleScreen
-  scene3: 
+  scene3: SampleScene
   pauseMenuUI: {fileID: 1121085748}
 --- !u!4 &215751441
 Transform:
@@ -2775,6 +2775,7 @@ MonoBehaviour:
   nameText: {fileID: 1450031824}
   dialogueText: {fileID: 796536225}
   animator: {fileID: 1400698368}
+  sceneManager: {fileID: 215751439}
 --- !u!4 &1644846808
 Transform:
   m_ObjectHideFlags: 0
