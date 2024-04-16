@@ -7,6 +7,7 @@ public class Safe : MonoBehaviour
     [SerializeField] Dial dial;
     [SerializeField] float[] wheelPack; //angle of each wheel
     [SerializeField] int[] wheelPackNGradians; //value of each wheel
+    [SerializeField] bool unlocked = false;
 
     void Start()
     {
@@ -47,9 +48,10 @@ public class Safe : MonoBehaviour
                 break;
             }
         }
-        if (cracked)
+        if (cracked && !unlocked)
         {
-            Debug.Log("You Win!");
+            unlocked = true;
+            Debug.Log("You Win!"); //REPLACE HERE!!!!!!!!!!!
         }
     }
 

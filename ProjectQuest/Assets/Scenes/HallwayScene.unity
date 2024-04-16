@@ -1056,8 +1056,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.5
-  m_fontSizeBase: 0.5
+  m_fontSize: 0.3
+  m_fontSizeBase: 0.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3597,11 +3597,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: The Boy
+    names:
+    - Sam
+    - Maid
+    - Maid
+    - Sam
+    - Maid
+    - Sam
+    - Sam
+    - Maid
     sentences:
-    - ... ... ... ... ... ... ... ... ... ... ...
-    - TELL ME WHERE FATHER IS RIGHT NOW
-    - WHO ARE YOU??????????????????????????
+    - Excuse me Miss, who are you?
+    - "*Sob* OHH MY MITTENS, WHERE COULD YOU BE\u2026. *Sob*"
+    - "Oh young boy, could you please help me find my Mittens, she was meant to come
+      eat food hours ago\u2026"
+    - "Sorry Miss, but I must really get back to my parents or they will be worried,
+      good luck finding your\u2026uh\u2026mittens"
+    - "Ohh please, help me\u2026my poor Mittens may be shivering in a corner, lost
+      and alone\u2026ohhh I don\u2019t even want to think about what suffering she
+      could be going through *Sobs*"
+    - (I guess I should help her)
+    - "Don\u2019t worry Miss, I\u2019ll help you find Mittens, I\u2019m sure my parents
+      will understand if I am late."
+    - "Oh thank you young man, thank you\u2026"
 --- !u!114 &2106489358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3714,7 +3732,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106489355}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.3197098, y: 2.3197098, z: 2.3197098}
   m_ConstrainProportionsScale: 0
@@ -3723,7 +3741,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030518, y: -352}
+  m_AnchoredPosition: {x: 0, y: -352.00003}
   m_SizeDelta: {x: 125.63, y: 63.075}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2106489363
