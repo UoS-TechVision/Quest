@@ -1792,7 +1792,6 @@ GameObject:
   - component: {fileID: 146625146}
   - component: {fileID: 146625149}
   - component: {fileID: 146625150}
-  - component: {fileID: 146625151}
   m_Layer: 0
   m_Name: WhiteCat
   m_TagString: Mittens
@@ -1928,21 +1927,6 @@ MonoBehaviour:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 2100000, guid: cf5b53ec0a211114fbf5278d1d9a441d, type: 2}
   outlined: 0
---- !u!114 &146625151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146625145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
 --- !u!1 &148513907
 GameObject:
   m_ObjectHideFlags: 0
@@ -3496,7 +3480,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1558190422}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: catChecker, Assembly-CSharp
         m_MethodName: CatLoop
         m_Mode: 1
@@ -7945,7 +7929,6 @@ GameObject:
   - component: {fileID: 896858818}
   - component: {fileID: 896858817}
   - component: {fileID: 896858816}
-  - component: {fileID: 896858815}
   m_Layer: 0
   m_Name: GreyCat
   m_TagString: Tim
@@ -7968,21 +7951,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1558190423}
   m_LocalEulerAnglesHint: {x: 0, y: 0.759, z: 0}
---- !u!114 &896858815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896858813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
 --- !u!114 &896858816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12830,7 +12798,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1558190423}
-  - component: {fileID: 1558190422}
   m_Layer: 0
   m_Name: catManager
   m_TagString: Untagged
@@ -12838,18 +12805,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1558190422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1558190421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05b22ecc42817724cb814a4737a9b59f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1558190423
 Transform:
   m_ObjectHideFlags: 0
