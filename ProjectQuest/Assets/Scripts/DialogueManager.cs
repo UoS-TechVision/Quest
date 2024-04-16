@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour
     public Animator animator;
     private Queue<string> sentences;
     private Queue<string> names;
+    public GameObject sceneManager;
     // Start is called before the first frame update
     void Start() {
         sentences = new Queue<string>();
@@ -55,7 +56,14 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void EndDialogue() {
+        LevelManager levelManager = sceneManager.GetComponent<LevelManager>();
         animator.SetBool("isOpen", false);
         Debug.Log("End of conversation");
+        if (levelManager != null) {
+            // Call the changeScene3 method on the instance of LevelManager
+            levelManager.changeScene3();
+        } else {
+            Debug.LogError("LevelManager component not found on the SceneManager GameObject.");
+        }
     }
 }
