@@ -5,15 +5,15 @@ using UnityEngine;
 public class dialogueActivate : MonoBehaviour
 {
     public DialogueTrigger dialogueTrigger;
-    // Start is called before the first frame update
+
     void Start()
     {
-         dialogueTrigger.TriggerDialogue();
+        StartCoroutine(TriggerDialogueWithDelay());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator TriggerDialogueWithDelay()
     {
-        
+        yield return new WaitForSeconds(1.0f); // Adjust the delay time as needed
+        dialogueTrigger.TriggerDialogue();
     }
 }
