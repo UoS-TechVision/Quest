@@ -1184,7 +1184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene1: SampleScene
-  scene2: 
+  scene2: OpenSafe
   scene3: 
   pauseMenuUI: {fileID: 0}
 --- !u!4 &2015455211
